@@ -10,6 +10,7 @@ import { Link } from 'react-router';
 import { onRegistrationClicked } from "../actions/UserAction.js";
 import { onLoginClicked } from "../actions/UserAction.js";
 
+
 const paperStyle = {
     height: "80%",
     width: "80%",
@@ -40,9 +41,12 @@ export class App extends React.Component {
             <MuiThemeProvider>
                 <div>
                     <Navbar handleToggle={this.handleToggle} />
-                    <LeftNav onRegistrationClicked={this.onRegistrationClicked} changeState={this.changeState} handleClose={this.handleClose} open={this.state.open} />
+                    <LeftNav 
+                        onRegistrationClicked={this.onRegistrationClicked} changeState={this.changeState} handleClose={this.handleClose} open={this.state.open} 
+                        onLoginClicked={this.onLoginClicked} changeState={this.changeState} handleClose={this.handleClose} open={this.state.open}
+                        />
                     <Paper style={paperStyle}>
-                        {this.props.children}
+                         {this.props.children}                        
                     </Paper>
                 </div>
             </MuiThemeProvider>

@@ -25,6 +25,7 @@ const store = createStore(
     applyMiddleware(thunk, logger)
 );
 
+console.log("Store",store);
 
 const routes = (
     <Router history={browserHistory}>

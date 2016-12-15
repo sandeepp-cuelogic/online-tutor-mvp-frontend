@@ -5,6 +5,7 @@ import { browserHistory } from "react-router";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { LeftNav } from "../components/LeftNav";
+import Router, {Link} from 'react-router';
 
 
 export default class LeftNavPage extends React.Component {

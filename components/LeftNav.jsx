@@ -1,4 +1,5 @@
-import React, { PropTypes } from "react";
+//import React, { PropTypes } from "react";
+import React, { PropTypes, Component } from 'react';
 import { render } from "react-dom";
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -8,9 +9,9 @@ import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import MenuItem from 'material-ui/MenuItem';
 import FontIcon from 'material-ui/FontIcon';
-import { Link } from 'react-router';
- 
-export const LeftNav = (props) => {    
+import Router, {Link} from 'react-router';
+
+export const LeftNav = (props) => {
         return (  
             <div>
               <Drawer 
@@ -21,9 +22,9 @@ export const LeftNav = (props) => {
                 icon={<FontIcon className="muidocs-icon-custom-github" />}
                 onRequestChange={(open) => props.changeState({open})}
                 >
-                <AppBar title="Online Tutor" />
-                <MenuItem onTouchTap={props.onRegistrationClicked} value = "/register" containerElement={<Link to="/register" />} >Registration</MenuItem>
-                <MenuItem onTouchTap={props.onLoginClicked} value = "/login" containerElement={<Link to="/login" />} >Login</MenuItem>
+                <AppBar title="Online Tutor" />                                          
+                <MenuItem onTouchTap={props.handleClose} value = "/register" containerElement={<Link to="/register" />} >Registration</MenuItem>
+                <MenuItem onTouchTap={props.handleClose} value = "/login" containerElement={<Link to="/login" />} >Login</MenuItem>
                 <MenuItem onTouchTap={props.handleClose} value = "/" containerElement={<Link to="/" />} >Student Dashboard</MenuItem>
                 <MenuItem onTouchTap={props.handleClose} value = "/" containerElement={<Link to="/" />} >Teacher Dashboard</MenuItem>
                 <MenuItem onTouchTap={props.handleClose} value = "/" containerElement={<Link to="/" />} >Schedule Session</MenuItem>

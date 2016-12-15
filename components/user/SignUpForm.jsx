@@ -75,7 +75,7 @@ class SignUpForm extends React.Component {
    */
   render() {
     return (
-      <Card className="container">
+      
         <form action="/" onSubmit={this.processForm.bind(this)}>
           <h2 className="card-heading">Sign Up</h2>
 
@@ -99,7 +99,7 @@ class SignUpForm extends React.Component {
 
           <CardText>Already have an account? <Link to={'/login'}>Log in</Link></CardText>
         </form>
-      </Card>
+      
     );
   }
 
